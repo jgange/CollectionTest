@@ -17,6 +17,8 @@ class Program
              
         }
 
+        // need to add ability to add new items as well as modify what is saved to the file
+
         /*
         Attribute strength = new Attribute("Strength", 12);
         Attribute dextertity = new Attribute("Dexterity", 12);
