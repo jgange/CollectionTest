@@ -20,7 +20,23 @@ public class AttributeList: List<Attribute>
     }
 
     public AttributeList() {}
-    
+
+    static public bool updateAttribute(AttributeList attributelist, string attributeName, int attributeValue)
+    {
+        //expect an Attribute and search for the AttributeName and change the associated value
+        //return true if successfully updated value, false if the value is missing
+        bool found = false;
+
+        foreach(Attribute item in attributelist)
+        {
+            if(item.AttributeName == attributeName)
+            {
+                item.AttributeValue = attributeValue;
+            }    
+        }
+        return found;
+    }
+
     static public void DisplayAttributeList(AttributeList attributes)
     {
         foreach(Attribute attribute in attributes)
