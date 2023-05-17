@@ -9,36 +9,23 @@ class Program
 
         //List<Attribute>? attributesFromDisk = new List<Attribute>();
         AttributeList? attributesFromDisk = new AttributeList();
-  
-        using (StreamReader r = new StreamReader(fileName))  
-        {  
-            string? json = r.ReadToEnd();
-            attributesFromDisk = JsonSerializer.Deserialize<AttributeList>(json);
-             
-        }
+
+        //AttributeList.ReadFromDisk(fileName, out attributesFromDisk);
 
         // need to add ability to add new items as well as modify what is saved to the file
 
-        /*
         Attribute strength = new Attribute("Strength", 12);
         Attribute dextertity = new Attribute("Dexterity", 12);
 
         AttributeList attributes = new AttributeList(strength, dextertity);
 
-        attributes.DisplayAttributeList(attributes);
+        AttributeList.DisplayAttributeList(attributes);
 
-        var systemJsonReadable = JsonSerializer.Serialize(attributes, new JsonSerializerOptions
-        {
-            WriteIndented = true
-        });
-        Console.WriteLine(systemJsonReadable);
-        Console.WriteLine();
-        File.WriteAllText(fileName, systemJsonReadable);
-        */
+        AttributeList.WriteToDisk(fileName, attributes);
 
         if (attributesFromDisk!=null)
         {
-            attributesFromDisk.DisplayAttributeList(attributesFromDisk);
+            AttributeList.DisplayAttributeList(attributes);
         }
     }
 }
