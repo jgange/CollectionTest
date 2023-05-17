@@ -22,10 +22,5 @@ class Program
         AttributeList.DisplayAttributeList(attributes);
 
         AttributeList.WriteToDisk(fileName, attributes);
-
-        if (attributesFromDisk!=null)
-        {
-            AttributeList.DisplayAttributeList(attributes);
-        }
     }
 }
