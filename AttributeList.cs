@@ -19,10 +19,8 @@ public class AttributeList: List<Attribute>
         }
     }
 
-    public AttributeList()
-    {
-
-    }
+    public AttributeList() {}
+    
     static public void DisplayAttributeList(AttributeList attributes)
     {
         foreach(Attribute attribute in attributes)
