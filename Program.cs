@@ -12,12 +12,16 @@ class Program
         string fileName = ReadSetting("fileName");
         
         AttributeList.ReadFromDisk(fileName, out attributesFromDisk);
-        characterRace.baseAttributes = attributesFromDisk;
+        characterRace.BaseAttributes = attributesFromDisk;
 
         characterRace.DisplayRace();
 
         SpecialAbilities specialAbilities = new("Mesmerism","Like hypnotism.");
         specialAbilities.Display();
+
+        Character bob = new Character();
+        bob.CharacterSpecialAbilities=new("Mesmerism","Like hypnotism.");
+
     }
 
     static string ReadSetting(string key)  

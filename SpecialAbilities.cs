@@ -2,8 +2,8 @@ namespace CollectionTest;
 
 class SpecialAbilities
 {
-    public string? SpecialAbilityName { get; set; }
-    public string? SpecialAbilityShortDescription { get; set; }
+    public string? SpecialAbilityName { get; set; } = "";
+    public string? SpecialAbilityShortDescription { get; set; } = "";
 
     public SpecialAbilities(string specialAbilityName, string specialAbilityShortDescription)
     {

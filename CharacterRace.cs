@@ -17,18 +17,27 @@ class Race
     public string? RaceType { get; set; } = "Base Human";
     public int? StartingTaint { get; set; } = 0;
 
-    public AttributeList? baseAttributes {get; set;}
+    public AttributeList? BaseAttributes {get; set;}
+    
+    public Race(AttributeList? attributes)
+    {
+        BaseAttributes = attributes;
+    }
 
+    public Race()
+    {
+
+    }
     public void DisplayRace()
     {
         Console.WriteLine("Race: " + RaceName);
         Console.WriteLine("Type: " + RaceType);
         Console.WriteLine("Taint:  " + StartingTaint);
 
-        if (baseAttributes != null)
+        if (BaseAttributes != null)
         {
             Console.WriteLine("Base attributes:");
-            AttributeList.DisplayAttributeList(baseAttributes);
+            AttributeList.DisplayAttributeList(BaseAttributes);
         }
     }
 
