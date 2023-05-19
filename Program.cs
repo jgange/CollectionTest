@@ -9,14 +9,15 @@ class Program
         AttributeList? attributesFromDisk = new AttributeList();
 
         Race characterRace = new Race();
-        characterRace.RaceName = "Human";
-        characterRace.RaceType = "Base human";
         string fileName = ReadSetting("fileName");
-        //characterRace.baseAttributes = 
-        AttributeList.ReadFromDisk(fileName, out attributesFromDisk);
         
+        AttributeList.ReadFromDisk(fileName, out attributesFromDisk);
+        characterRace.baseAttributes = attributesFromDisk;
 
         characterRace.DisplayRace();
+
+        SpecialAbilities specialAbilities = new("Mesmerism","Like hypnotism.");
+        specialAbilities.Display();
     }
 
     static string ReadSetting(string key)  
