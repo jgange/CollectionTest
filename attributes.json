@@ -1,10 +1,26 @@
 [
   {
     "AttributeName": "Strength",
-    "AttributeValue": 12
+    "AttributeValue": 10
   },
   {
     "AttributeName": "Dexterity",
-    "AttributeValue": 12
+    "AttributeValue": 10
+  },
+  {
+    "AttributeName": "Constitution",
+    "AttributeValue": 10
+  },
+  {
+    "AttributeName": "Size",
+    "AttributeValue": 10
+  },
+  {
+    "AttributeName": "Intellect",
+    "AttributeValue": 10
+  },
+  {
+    "AttributeName": "Power",
+    "AttributeValue": 10
   }
 ]
